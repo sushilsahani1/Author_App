@@ -1,0 +1,11 @@
+<%= author.name%>
+<a href="/authors/<%= author.id/edit%>">Edit</a>
+<%- include('../partials/deleteForm',{
+    url:`/authors/${author.id}`})
+%> 
+
+if(booksByAuthor > 0){ %>
+    <%- include('../partials/bookGrid',{
+        books : booksByAuthor
+    })%>
+<%}
